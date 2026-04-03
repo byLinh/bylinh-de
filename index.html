@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<!-- saved from url=(0043)file:///C:/Users/Linh/Downloads/bylinh.html -->
-<html lang="de"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bylinh.de – Dein Geschenk Concierge</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com/">
-  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-  <link href="./bylinh.de – Dein Geschenk Concierge_files/css2" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -19,133 +20,152 @@
       --hover-bg: #F0E8E1;
       --white:    #FFFFFF;
     }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --sand:     #1A1612;
+        --creme:    #221E1A;
+        --dark:     #F0EBE3;
+        --mid:      #B0A898;
+        --olive:    #7A9A45;
+        --terra:    #D4926A;
+        --hover-bg: #2A2420;
+        --white:    #2E2924;
+      }
+      nav, .mobile-menu, footer { background: #1E1A16 !important; }
+      .proof-bar { background: #4A5E28 !important; }
+      .gallery-card, .price-box, .avail-box, .testimonial { background: #2A2420 !important; }
+      .anlass-tag { background: #2A2420 !important; border-color: #3A3028 !important; }
+    }
     html { scroll-behavior: smooth; }
     body { font-family: 'Lato', sans-serif; background-color: var(--sand); color: var(--dark); font-size: 16px; line-height: 1.7; }
     h1, h2, h3 { font-family: 'Playfair Display', serif; line-height: 1.3; }
     a { color: var(--olive); text-decoration: none; }
     a:hover { text-decoration: underline; }
     .container { max-width: 720px; margin: 0 auto; padding: 0 1.5rem; }
-    .btn { display: inline-block; background-color: var(--olive); color: var(--white); padding: 0.75rem 1.75rem; border-radius: 2px; font-family: 'Lato', sans-serif; font-weight: 700; font-size: 0.95rem; letter-spacing: 0.03em; transition: background 0.2s; cursor: pointer; border: none; }
+    .btn { display: inline-block; background-color: var(--olive); color: #fff; padding: 0.75rem 1.75rem; border-radius: 2px; font-family: 'Lato', sans-serif; font-weight: 700; font-size: 0.95rem; letter-spacing: 0.03em; transition: background 0.2s; cursor: pointer; border: none; }
     .btn:hover { background-color: #3f5024; text-decoration: none; }
     .btn-outline { background: transparent; border: 2px solid var(--olive); color: var(--olive); }
-    .btn-outline:hover { background: var(--olive); color: var(--white); }
+    .btn-outline:hover { background: var(--olive); color: #fff; }
     section { padding: 3.5rem 0; }
     section.alt { background-color: var(--creme); }
     section h2 { font-size: 1.6rem; margin-bottom: 0.5rem; }
     .section-sub { color: var(--mid); font-size: 0.95rem; margin-bottom: 1.5rem; }
 
-    /* Navbar */
-    nav { background: var(--white); position: sticky; top: 0; z-index: 200; border-bottom: 1px solid var(--hover-bg); }
-    .nav-inner { max-width: 720px; margin: 0 auto; padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; }
-    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--dark); font-weight: 600; }
-    .nav-links { display: flex; gap: 1.5rem; align-items: center; list-style: none; }
-    .nav-links a { font-size: 0.875rem; color: var(--mid); font-weight: 700; }
-    .nav-links a:hover { color: var(--olive); text-decoration: none; }
-    .nav-cta { font-size: 0.8rem !important; padding: 0.5rem 1.1rem; color: var(--white) !important; }
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
-    .hamburger span { display: block; width: 24px; height: 2px; background: var(--dark); transition: all 0.3s; }
-    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .hamburger.open span:nth-child(2) { opacity: 0; }
-    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-    .mobile-menu { display: none; background: var(--white); border-top: 1px solid var(--hover-bg); padding: 1rem 1.5rem 1.5rem; }
-    .mobile-menu.open { display: block; }
-    .mobile-menu ul { list-style: none; }
-    .mobile-menu li { padding: 0.6rem 0; border-bottom: 1px solid var(--hover-bg); }
-    .mobile-menu a { color: var(--dark); font-weight: 700; font-size: 1rem; }
-    .mobile-menu .btn { margin-top: 1rem; width: 100%; text-align: center; display: block; }
+```
+/* Navbar */
+nav { background: var(--white); position: sticky; top: 0; z-index: 200; border-bottom: 1px solid var(--hover-bg); }
+.nav-inner { max-width: 720px; margin: 0 auto; padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; }
+.nav-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--dark); font-weight: 600; }
+.nav-links { display: flex; gap: 1.5rem; align-items: center; list-style: none; }
+.nav-links a { font-size: 0.875rem; color: var(--mid); font-weight: 700; }
+.nav-links a:hover { color: var(--olive); text-decoration: none; }
+.nav-cta { font-size: 0.8rem !important; padding: 0.5rem 1.1rem; color: #fff !important; }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--dark); transition: all 0.3s; }
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mobile-menu { display: none; background: var(--white); border-top: 1px solid var(--hover-bg); padding: 1rem 1.5rem 1.5rem; }
+.mobile-menu.open { display: block; }
+.mobile-menu ul { list-style: none; }
+.mobile-menu li { padding: 0.6rem 0; border-bottom: 1px solid var(--hover-bg); }
+.mobile-menu a { color: var(--dark); font-weight: 700; font-size: 1rem; }
+.mobile-menu .btn { margin-top: 1rem; width: 100%; text-align: center; display: block; }
 
-    /* Hero */
-    .hero { background-color: var(--creme); padding: 4rem 1.5rem 3.5rem; text-align: center; }
-    .hero-viet { font-size: 0.78rem; color: var(--terra); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem; }
-    .hero h1 { font-size: clamp(2rem, 6vw, 3rem); margin-bottom: 0.5rem; }
-    .hero-tagline { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.15rem; color: var(--terra); margin-bottom: 1.25rem; }
-    .hero p { color: var(--mid); max-width: 520px; margin: 0 auto 0.75rem; }
-    .hero-promise { font-size: 0.9rem; color: var(--olive); font-weight: 700; margin-bottom: 2rem; }
-    .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+/* Hero */
+.hero { background-color: var(--creme); padding: 4rem 1.5rem 3.5rem; text-align: center; }
+.hero-viet { font-size: 0.78rem; color: var(--terra); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem; }
+.hero h1 { font-size: clamp(2rem, 6vw, 3rem); margin-bottom: 0.5rem; }
+.hero-tagline { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.15rem; color: var(--terra); margin-bottom: 1.25rem; }
+.hero p { color: var(--mid); max-width: 520px; margin: 0 auto 0.75rem; }
+.hero-promise { font-size: 0.9rem; color: var(--olive); font-weight: 700; margin-bottom: 2rem; }
+.hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
-    /* Proof Bar */
-    .proof-bar { background: var(--olive); color: var(--white); padding: 0.75rem 1.5rem; text-align: center; font-size: 0.875rem; letter-spacing: 0.02em; }
+/* Proof Bar */
+.proof-bar { background: var(--olive); color: #fff; padding: 0.75rem 1.5rem; text-align: center; font-size: 0.875rem; letter-spacing: 0.02em; }
 
-    /* Vorteile */
-    .vorteile-list { list-style: none; margin: 1.25rem 0 2rem; }
-    .vorteile-list li { padding: 0.7rem 0; border-bottom: 1px solid var(--hover-bg); display: flex; align-items: flex-start; gap: 0.75rem; }
-    .vorteile-list li::before { content: "✦"; color: var(--olive); flex-shrink: 0; margin-top: 0.15rem; }
+/* Vorteile */
+.vorteile-list { list-style: none; margin: 1.25rem 0 2rem; }
+.vorteile-list li { padding: 0.7rem 0; border-bottom: 1px solid var(--hover-bg); display: flex; align-items: flex-start; gap: 0.75rem; }
+.vorteile-list li::before { content: "✦"; color: var(--olive); flex-shrink: 0; margin-top: 0.15rem; }
 
-    /* Testimonials */
-    .testimonials { display: flex; flex-direction: column; gap: 1rem; margin: 1.5rem 0 2rem; }
-    .testimonial { background: var(--white); border-left: 3px solid var(--terra); padding: 1.1rem 1.25rem; border-radius: 0 2px 2px 0; }
-    .testimonial-text { font-style: italic; color: var(--dark); margin-bottom: 0.4rem; font-size: 0.95rem; }
-    .testimonial-author { font-size: 0.8rem; color: var(--mid); font-weight: 700; }
+/* Testimonials */
+.testimonials { display: flex; flex-direction: column; gap: 1rem; margin: 1.5rem 0 2rem; }
+.testimonial { background: var(--white); border-left: 3px solid var(--terra); padding: 1.1rem 1.25rem; border-radius: 0 2px 2px 0; }
+.testimonial-text { font-style: italic; color: var(--dark); margin-bottom: 0.4rem; font-size: 0.95rem; }
+.testimonial-author { font-size: 0.8rem; color: var(--mid); font-weight: 700; }
 
-    /* Prozess */
-    .steps { margin: 1.5rem 0 2rem; }
-    .step { display: flex; gap: 1.25rem; margin-bottom: 1.5rem; align-items: flex-start; }
-    .step-num { background: var(--olive); color: var(--white); font-family: 'Playfair Display', serif; font-size: 0.9rem; width: 2rem; height: 2rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem; }
-    .step-content h3 { font-size: 1rem; font-family: 'Lato', sans-serif; font-weight: 700; margin-bottom: 0.2rem; }
-    .step-content p { color: var(--mid); font-size: 0.95rem; }
+/* Prozess */
+.steps { margin: 1.5rem 0 2rem; }
+.step { display: flex; gap: 1.25rem; margin-bottom: 1.5rem; align-items: flex-start; }
+.step-num { background: var(--olive); color: #fff; font-family: 'Playfair Display', serif; font-size: 0.9rem; width: 2rem; height: 2rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem; }
+.step-content h3 { font-size: 1rem; font-family: 'Lato', sans-serif; font-weight: 700; margin-bottom: 0.2rem; }
+.step-content p { color: var(--mid); font-size: 0.95rem; }
 
-    /* Über mich */
-    .about-grid { display: grid; grid-template-columns: 130px 1fr; gap: 2rem; align-items: start; margin-top: 1.5rem; }
-    .about-img { width: 130px; height: 130px; border-radius: 50%; object-fit: cover; background: var(--hover-bg); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; }
-    .about-text p { color: var(--mid); font-size: 0.95rem; margin-bottom: 0.6rem; }
+/* Über mich */
+.about-grid { display: grid; grid-template-columns: 130px 1fr; gap: 2rem; align-items: start; margin-top: 1.5rem; }
+.about-img { width: 130px; height: 130px; border-radius: 50%; object-fit: cover; background: var(--hover-bg); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; }
+.about-text p { color: var(--mid); font-size: 0.95rem; margin-bottom: 0.6rem; }
 
-    /* Anlässe */
-    .anlaesse-grid { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.25rem; }
-    .anlass-tag { background: var(--white); border: 1px solid var(--hover-bg); padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.9rem; }
+/* Anlässe */
+.anlaesse-grid { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.25rem; }
+.anlass-tag { background: var(--white); border: 1px solid var(--hover-bg); padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.9rem; }
 
-    /* Galerie */
-    .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 1.5rem 0 2rem; }
-    .gallery-card { background: var(--white); border-radius: 2px; overflow: hidden; border: 1px solid var(--hover-bg); transition: transform 0.2s, box-shadow 0.2s; text-decoration: none; display: block; color: var(--dark); }
-    .gallery-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.08); text-decoration: none; }
-    .gallery-img { aspect-ratio: 1; background: var(--hover-bg); display: flex; align-items: center; justify-content: center; font-size: 2rem; overflow: hidden; }
-    .gallery-img img { width: 100%; height: 100%; object-fit: cover; }
-    .gallery-info { padding: 0.75rem 1rem; }
-    .gallery-info h3 { font-size: 0.9rem; font-family: 'Lato', sans-serif; font-weight: 700; margin-bottom: 0.2rem; }
-    .gallery-info p { font-size: 0.8rem; color: var(--mid); }
-    .gallery-arrow { font-size: 0.75rem; color: var(--olive); margin-top: 0.3rem; display: block; font-weight: 700; }
+/* Galerie */
+.gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 1.5rem 0 2rem; }
+.gallery-card { background: var(--white); border-radius: 2px; overflow: hidden; border: 1px solid var(--hover-bg); transition: transform 0.2s, box-shadow 0.2s; text-decoration: none; display: block; color: var(--dark); }
+.gallery-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.08); text-decoration: none; }
+.gallery-img { aspect-ratio: 1; background: var(--hover-bg); display: flex; align-items: center; justify-content: center; font-size: 2rem; overflow: hidden; }
+.gallery-img img { width: 100%; height: 100%; object-fit: cover; }
+.gallery-info { padding: 0.75rem 1rem; }
+.gallery-info h3 { font-size: 0.9rem; font-family: 'Lato', sans-serif; font-weight: 700; margin-bottom: 0.2rem; }
+.gallery-info p { font-size: 0.8rem; color: var(--mid); }
+.gallery-arrow { font-size: 0.75rem; color: var(--olive); margin-top: 0.3rem; display: block; font-weight: 700; }
 
-    /* Preise */
-    .price-box { background: var(--white); border-left: 3px solid var(--olive); padding: 1.25rem 1.5rem; margin: 1.25rem 0 2rem; }
-    .price-box p { margin-bottom: 0.4rem; color: var(--mid); }
+/* Preise */
+.price-box { background: var(--white); border-left: 3px solid var(--olive); padding: 1.25rem 1.5rem; margin: 1.25rem 0 2rem; }
+.price-box p { margin-bottom: 0.4rem; color: var(--mid); }
 
-    /* Verfügbarkeit */
-    .avail-box { background: var(--white); border: 1px solid var(--hover-bg); padding: 1.25rem 1.5rem; margin: 1.25rem 0 2rem; border-radius: 2px; }
-    .avail-spots { font-size: 0.9rem; color: var(--terra); font-weight: 700; margin-bottom: 0.5rem; }
-    .avail-box p { color: var(--mid); margin-bottom: 0.4rem; }
+/* Verfügbarkeit */
+.avail-box { background: var(--white); border: 1px solid var(--hover-bg); padding: 1.25rem 1.5rem; margin: 1.25rem 0 2rem; border-radius: 2px; }
+.avail-spots { font-size: 0.9rem; color: var(--terra); font-weight: 700; margin-bottom: 0.5rem; }
+.avail-box p { color: var(--mid); margin-bottom: 0.4rem; }
 
-    /* FAQ */
-    .faq { margin: 1.5rem 0 2rem; }
-    .faq-item { border-bottom: 1px solid var(--hover-bg); }
-    .faq-q { width: 100%; background: none; border: none; text-align: left; padding: 1rem 0; cursor: pointer; font-family: 'Lato', sans-serif; font-weight: 700; font-size: 0.95rem; color: var(--dark); display: flex; justify-content: space-between; align-items: center; }
-    .faq-q:hover { color: var(--olive); }
-    .faq-icon { font-size: 1.2rem; color: var(--olive); transition: transform 0.2s; flex-shrink: 0; margin-left: 1rem; }
-    .faq-a { display: none; padding: 0 0 1rem; color: var(--mid); font-size: 0.95rem; }
-    .faq-item.open .faq-a { display: block; }
-    .faq-item.open .faq-icon { transform: rotate(45deg); }
+/* FAQ */
+.faq { margin: 1.5rem 0 2rem; }
+.faq-item { border-bottom: 1px solid var(--hover-bg); }
+.faq-q { width: 100%; background: none; border: none; text-align: left; padding: 1rem 0; cursor: pointer; font-family: 'Lato', sans-serif; font-weight: 700; font-size: 0.95rem; color: var(--dark); display: flex; justify-content: space-between; align-items: center; }
+.faq-q:hover { color: var(--olive); }
+.faq-icon { font-size: 1.2rem; color: var(--olive); transition: transform 0.2s; flex-shrink: 0; margin-left: 1rem; }
+.faq-a { display: none; padding: 0 0 1rem; color: var(--mid); font-size: 0.95rem; }
+.faq-item.open .faq-a { display: block; }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
 
-    /* Kontakt */
-    .kontakt-links { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.25rem; }
-    .kontakt-links a { color: var(--olive); font-weight: 700; }
+/* Kontakt */
+.kontakt-links { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.25rem; }
+.kontakt-links a { color: var(--olive); font-weight: 700; }
 
-    /* Footer */
-    footer { background: var(--white); border-top: 1px solid var(--hover-bg); padding: 2rem 1.5rem; text-align: center; }
-    .footer-inner { max-width: 720px; margin: 0 auto; }
-    .footer-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1rem; font-size: 0.875rem; }
-    .footer-links a { color: var(--mid); }
-    .footer-links a:hover { color: var(--olive); }
-    .footer-brand { font-family: 'Playfair Display', serif; font-size: 0.9rem; color: var(--mid); }
-    .footer-viet { font-size: 0.75rem; color: var(--terra); margin-top: 0.25rem; font-style: italic; }
+/* Footer */
+footer { background: var(--white); border-top: 1px solid var(--hover-bg); padding: 2rem 1.5rem; text-align: center; }
+.footer-inner { max-width: 720px; margin: 0 auto; }
+.footer-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1rem; font-size: 0.875rem; }
+.footer-links a { color: var(--mid); }
+.footer-links a:hover { color: var(--olive); }
+.footer-brand { font-family: 'Playfair Display', serif; font-size: 0.9rem; color: var(--mid); }
+.footer-viet { font-size: 0.75rem; color: var(--terra); margin-top: 0.25rem; font-style: italic; }
 
-    /* Mobile */
-    @media (max-width: 640px) {
-      .nav-links { display: none; }
-      .hamburger { display: flex; }
-      .about-grid { grid-template-columns: 1fr; }
-      .about-img { margin: 0 auto; }
-      .gallery-grid { grid-template-columns: 1fr; }
-      .hero-btns { flex-direction: column; align-items: center; }
-      .hero-btns .btn { width: 100%; text-align: center; }
-    }
+/* Mobile */
+@media (max-width: 640px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .about-grid { grid-template-columns: 1fr; }
+  .about-img { margin: 0 auto; }
+  .gallery-grid { grid-template-columns: 1fr; }
+  .hero-btns { flex-direction: column; align-items: center; }
+  .hero-btns .btn { width: 100%; text-align: center; }
+}
+```
+
   </style>
 </head>
 <body>
@@ -154,11 +174,11 @@
     <div class="nav-inner">
       <span class="nav-logo">bylinh.de</span>
       <ul class="nav-links">
-        <li><a href="file:///C:/Users/Linh/Downloads/bylinh.html#vorteile">Vorteile</a></li>
-        <li><a href="file:///C:/Users/Linh/Downloads/bylinh.html#prozess">Ablauf</a></li>
-        <li><a href="file:///C:/Users/Linh/Downloads/bylinh.html#galerie">Werke</a></li>
-        <li><a href="file:///C:/Users/Linh/Downloads/bylinh.html#faq">FAQ</a></li>
-        <li><a href="file:///C:/Users/Linh/Downloads/bylinh.html#anfragen" class="btn nav-cta">Anfragen</a></li>
+        <li><a href="#vorteile">Vorteile</a></li>
+        <li><a href="#prozess">Ablauf</a></li>
+        <li><a href="#galerie">Werke</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#anfragen" class="btn nav-cta">Anfragen</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Menü">
         <span></span><span></span><span></span>
@@ -166,12 +186,12 @@
     </div>
     <div class="mobile-menu" id="mobileMenu">
       <ul>
-        <li><a href="file:///C:/Users/Linh/Downloads/bylinh.html#vorteile" class="mobile-link">Vorteile</a></li>
-        <li><a href="file:///C:/Users/Linh/Downloads/bylinh.html#prozess" class="mobile-link">Ablauf</a></li>
-        <li><a href="file:///C:/Users/Linh/Downloads/bylinh.html#galerie" class="mobile-link">Werke</a></li>
-        <li><a href="file:///C:/Users/Linh/Downloads/bylinh.html#faq" class="mobile-link">FAQ</a></li>
+        <li><a href="#vorteile" class="mobile-link">Vorteile</a></li>
+        <li><a href="#prozess" class="mobile-link">Ablauf</a></li>
+        <li><a href="#galerie" class="mobile-link">Werke</a></li>
+        <li><a href="#faq" class="mobile-link">FAQ</a></li>
       </ul>
-      <a href="file:///C:/Users/Linh/Downloads/bylinh.html#anfragen" class="btn mobile-link">Geschenk anfragen</a>
+      <a href="#anfragen" class="btn mobile-link">Geschenk anfragen</a>
     </div>
   </nav>
 
@@ -182,8 +202,8 @@
     <p>Ich gestalte dein Geschenk so, dass es wirklich zum Anlass und zur Person passt.</p>
     <p class="hero-promise">✦ Du gibst erst frei, wenn alles stimmig ist — kein Risiko für dich.</p>
     <div class="hero-btns">
-      <a href="file:///C:/Users/Linh/Downloads/bylinh.html#anfragen" class="btn">Jetzt Geschenk anfragen</a>
-      <a href="file:///C:/Users/Linh/Downloads/bylinh.html#galerie" class="btn btn-outline">Meine Arbeiten ansehen</a>
+      <a href="#anfragen" class="btn">Jetzt Geschenk anfragen</a>
+      <a href="#galerie" class="btn btn-outline">Meine Arbeiten ansehen</a>
     </div>
   </div>
 
@@ -203,7 +223,6 @@
         <li>Begrenzte Kapazität: 3–5 Projekte pro Monat</li>
         <li>Auf Wunsch mit digitaler Komponente (z. B. Audiobotschaft per QR)</li>
       </ul>
-      <!-- PLATZHALTER: ersetze mit echten Kundenstimmen -->
       <div class="testimonials">
         <div class="testimonial">
           <p class="testimonial-text">„Als meine Mutter das Paket öffnete, hat sie geweint. Ich habe noch nie ein Geschenk gesehen, das so viel bedeutet hat."</p>
@@ -224,11 +243,11 @@
       <div class="steps">
         <div class="step"><div class="step-num">1</div><div class="step-content"><h3>Kurzer Austausch</h3><p>Wir klären Anlass, Person und Rahmen — 10 Minuten reichen.</p></div></div>
         <div class="step"><div class="step-num">2</div><div class="step-content"><h3>Anfrage-Check</h3><p>Ich bereite alles vor. Du prüfst nur die Details.</p></div></div>
-        <div class="step"><div class="step-num">3</div><div class="step-content"><h3>Idee &amp; Moodboard</h3><p>Du erhältst eine klare Idee mit ersten Designs.</p></div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-content"><h3>Idee & Moodboard</h3><p>Du erhältst eine klare Idee mit ersten Designs.</p></div></div>
         <div class="step"><div class="step-num">4</div><div class="step-content"><h3>Vorschau auf echtem Material</h3><p>Du siehst dein Design auf dem Objekt — bevor es graviert wird.</p></div></div>
-        <div class="step"><div class="step-num">5</div><div class="step-content"><h3>Fertigstellung &amp; Versand</h3><p>Erst nach deiner Freigabe beginne ich. Auf Wunsch verpacke und versende ich direkt.</p></div></div>
+        <div class="step"><div class="step-num">5</div><div class="step-content"><h3>Fertigstellung & Versand</h3><p>Erst nach deiner Freigabe beginne ich. Auf Wunsch verpacke und versende ich direkt.</p></div></div>
       </div>
-      <a href="file:///C:/Users/Linh/Downloads/bylinh.html#anfragen" class="btn">Jetzt starten</a>
+      <a href="#anfragen" class="btn">Jetzt starten</a>
     </div>
   </section>
 
@@ -270,19 +289,19 @@
       <h2>Meine bisherigen Werke</h2>
       <p class="section-sub">Klick auf ein Projekt für die ganze Geschichte.</p>
       <div class="gallery-grid">
-        <a href="file:///C:/Users/Linh/Downloads/projekte/smirglpapir.html" class="gallery-card">
+        <a href="projekte/smirglpapir.html" class="gallery-card">
           <div class="gallery-img">🪵</div>
-          <div class="gallery-info"><h3>B2B: smirglpapir</h3><p>Branding-Set mit Holzschild &amp; QR-Code</p><span class="gallery-arrow">Projekt ansehen →</span></div>
+          <div class="gallery-info"><h3>B2B: smirglpapir</h3><p>Branding-Set mit Holzschild & QR-Code</p><span class="gallery-arrow">Projekt ansehen →</span></div>
         </a>
-        <a href="file:///C:/Users/Linh/Downloads/projekte/keeper.html" class="gallery-card">
+        <a href="projekte/keeper.html" class="gallery-card">
           <div class="gallery-img">⚽</div>
-          <div class="gallery-info"><h3>Geld- &amp; Fotohalter</h3><p>„Wünsche werden wahr!"</p><span class="gallery-arrow">Projekt ansehen →</span></div>
+          <div class="gallery-info"><h3>Geld- & Fotohalter</h3><p>„Wünsche werden wahr!"</p><span class="gallery-arrow">Projekt ansehen →</span></div>
         </a>
-        <a href="file:///C:/Users/Linh/Downloads/projekte/vater-sohn.html" class="gallery-card">
+        <a href="projekte/vater-sohn.html" class="gallery-card">
           <div class="gallery-img">🚜</div>
-          <div class="gallery-info"><h3>Kraftstoff für Vater &amp; Sohn</h3><p>Personalisiertes Eichenholzbrett</p><span class="gallery-arrow">Projekt ansehen →</span></div>
+          <div class="gallery-info"><h3>Kraftstoff für Vater & Sohn</h3><p>Personalisiertes Eichenholzbrett</p><span class="gallery-arrow">Projekt ansehen →</span></div>
         </a>
-        <a href="file:///C:/Users/Linh/Downloads/projekte/busy-bags.html" class="gallery-card">
+        <a href="projekte/busy-bags.html" class="gallery-card">
           <div class="gallery-img">🎒</div>
           <div class="gallery-info"><h3>Busy Bags für unterwegs</h3><p>Beschäftigung mit Herz und Köpfchen</p><span class="gallery-arrow">Projekt ansehen →</span></div>
         </a>
@@ -299,7 +318,7 @@
         <p>Individuelle Geschenkideen mit persönlicher Begleitung liegen meist zwischen <strong>50–150 €</strong></p>
         <p>Du zahlst erst, wenn du zufrieden bist.</p>
       </div>
-      <a href="file:///C:/Users/Linh/Downloads/bylinh.html#anfragen" class="btn">Unverbindlich anfragen</a>
+      <a href="#anfragen" class="btn">Unverbindlich anfragen</a>
     </div>
   </section>
 
@@ -307,13 +326,12 @@
     <div class="container">
       <h2>Verfügbarkeit</h2>
       <div class="avail-box">
-        <!-- Monatlich aktualisieren -->
         <p class="avail-spots">⚡ Noch 3 von 5 Plätzen im Mai verfügbar</p>
         <p>Ich nehme pro Monat nur <strong>3–5 Projekte</strong> an, damit jedes die Aufmerksamkeit bekommt, die es verdient.</p>
         <p>Für zeitkritische Anlässe bitte mindestens <strong>2–3 Wochen</strong> einplanen.</p>
         <p>👉 Jetzt anfragen — ich melde mich innerhalb von 24 Stunden.</p>
       </div>
-      <a href="file:///C:/Users/Linh/Downloads/bylinh.html#anfragen" class="btn">Platz sichern</a>
+      <a href="#anfragen" class="btn">Platz sichern</a>
     </div>
   </section>
 
@@ -323,24 +341,36 @@
       <p class="section-sub">Alles was du wissen möchtest, bevor du anfragst.</p>
       <div class="faq">
         <div class="faq-item">
-          <button class="faq-q">Was passiert, wenn mir das Design nicht gefällt? <span class="faq-icon">+</span></button>
+          <button class="faq-q" type="button">Was passiert, wenn mir das Design nicht gefällt? <span class="faq-icon">+</span></button>
           <div class="faq-a">Kein Problem. Ich zeige dir die Vorschau bevor ich graviere. Du zahlst erst wenn du zufrieden bist — kein Risiko.</div>
         </div>
         <div class="faq-item">
-          <button class="faq-q">Wie lange dauert es bis das Geschenk fertig ist? <span class="faq-icon">+</span></button>
+          <button class="faq-q" type="button">Wie lange dauert es bis das Geschenk fertig ist? <span class="faq-icon">+</span></button>
           <div class="faq-a">In der Regel 7–10 Werktage nach deiner Freigabe. Für zeitkritische Anlässe bitte mindestens 2–3 Wochen einplanen.</div>
         </div>
         <div class="faq-item">
-          <button class="faq-q">Ich habe noch keine genaue Idee — kann ich trotzdem anfragen? <span class="faq-icon">+</span></button>
+          <button class="faq-q" type="button">Ich habe noch keine genaue Idee — kann ich trotzdem anfragen? <span class="faq-icon">+</span></button>
           <div class="faq-a">Ja, genau dafür bin ich da. Du erzählst mir Anlass, Person und Budget — den Rest übernehme ich.</div>
         </div>
         <div class="faq-item">
-          <button class="faq-q">Welche Materialien kannst du gravieren? <span class="faq-icon">+</span></button>
+          <button class="faq-q" type="button">Welche Materialien kannst du gravieren? <span class="faq-icon">+</span></button>
           <div class="faq-a">Holz, Schiefer, Spiegel, Edelstahl, Leder und mehr. Frag mich einfach wenn du ein bestimmtes Material im Kopf hast.</div>
         </div>
         <div class="faq-item">
-          <button class="faq-q">Kannst du auch auf Vietnamesisch gravieren? <span class="faq-icon">+</span></button>
+          <button class="faq-q" type="button">Kannst du auch auf Vietnamesisch gravieren? <span class="faq-icon">+</span></button>
           <div class="faq-a">Ja — das ist einer meiner Schwerpunkte. Bilinguale Gravuren auf Vietnamesisch und Deutsch, für bikulturelle Familien und Momente die beide Welten verbinden.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">Versandest du auch nach Österreich oder in die Schweiz? <span class="faq-icon">+</span></button>
+          <div class="faq-a">Ja, Versand in die gesamte DACH-Region ist möglich. Versandkosten werden bei der Anfrage besprochen.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">Kann ich mein eigenes Produkt mitbringen zum Gravieren? <span class="faq-icon">+</span></button>
+          <div class="faq-a">Ja — für Freunde und Familie biete ich einen BYOP-Service an. Schreib mich direkt an um mehr zu erfahren.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">Gibt es dich auch auf Etsy? <span class="faq-icon">+</span></button>
+          <div class="faq-a">Ja! Auf Etsy findest du eine Auswahl meiner Produkte. Hier auf bylinh.de bekommst du persönliche Beratung und individuelle Projekte die über den Etsy-Shop hinausgehen.</div>
         </div>
       </div>
     </div>
@@ -365,9 +395,9 @@
   <footer>
     <div class="footer-inner">
       <div class="footer-links">
-        <a href="file:///C:/Users/Linh/Downloads/bylinh.html#anfragen">Geschenk anfragen</a>
-        <a href="file:///C:/Users/Linh/Downloads/impressum.html">Impressum</a>
-        <a href="file:///C:/Users/Linh/Downloads/datenschutz.html">Datenschutz</a>
+        <a href="#anfragen">Geschenk anfragen</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
       </div>
       <p class="footer-brand">bylinh.de</p>
       <p class="footer-viet">Được làm bằng tình yêu — Gemacht mit Liebe</p>
@@ -375,27 +405,36 @@
   </footer>
 
   <script>
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('open');
-      mobileMenu.classList.toggle('open');
-    });
-    document.querySelectorAll('.mobile-link').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('open');
-        mobileMenu.classList.remove('open');
+    (function() {
+      var hamburger = document.getElementById('hamburger');
+      var mobileMenu = document.getElementById('mobileMenu');
+      
+      hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('open');
+        mobileMenu.classList.toggle('open');
       });
-    });
-    document.querySelectorAll('.faq-q').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const item = btn.parentElement;
-        const isOpen = item.classList.contains('open');
-        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-        if (!isOpen) item.classList.add('open');
+      
+      document.querySelectorAll('.mobile-link').forEach(function(link) {
+        link.addEventListener('click', function() {
+          hamburger.classList.remove('open');
+          mobileMenu.classList.remove('open');
+        });
       });
-    });
+
+      document.querySelectorAll('.faq-q').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var item = btn.closest('.faq-item');
+          var isOpen = item.classList.contains('open');
+          document.querySelectorAll('.faq-item').forEach(function(i) {
+            i.classList.remove('open');
+          });
+          if (!isOpen) {
+            item.classList.add('open');
+          }
+        });
+      });
+    })();
   </script>
 
-
-</body></html>
+</body>
+</html>
