@@ -53,14 +53,13 @@ h1.project-title { margin-bottom: 0.4rem; }
 .carousel-dots { position: absolute; bottom: 0.75rem; left: 50%; transform: translateX(-50%); display: flex; gap: 0.4rem; }
 .carousel-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(0,0,0,0.25); cursor: pointer; transition: background 0.2s; }
 .carousel-dot.active { background: var(--olive); }
-/* Desktop: Karussell ausblenden, Grid einblenden */
-@media (min-width: 641px) {
-  .mobile-only { display: none !important; }
-}
+/* Desktop: Karussell standardmäßig ausblenden */
+.mobile-only { display: none; }
 
 /* Mobil: Grid ausblenden, Karussell einblenden */
 @media (max-width: 640px) {
-  .desktop-only { display: none !important; }
+  .project-gallery.desktop-only { display: none; }
+  .carousel.mobile-only { display: block; }
   .carousel-track img { height: 260px; }
 }
 
