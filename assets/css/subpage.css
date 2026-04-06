@@ -53,6 +53,15 @@ h1.project-title { margin-bottom: 0.4rem; }
 .carousel-dots { position: absolute; bottom: 0.75rem; left: 50%; transform: translateX(-50%); display: flex; gap: 0.4rem; }
 .carousel-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(0,0,0,0.25); cursor: pointer; transition: background 0.2s; }
 .carousel-dot.active { background: var(--olive); }
+/* Desktop: Karussell als Kacheln anzeigen */
+@media (min-width: 641px) {
+  .carousel { overflow: visible; background: none; }
+  .carousel-track { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; transform: none !important; transition: none; }
+  .carousel-track img { min-width: 0; max-width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 2px; }
+  .carousel-btn, .carousel-dots { display: none; }
+}
+
+/* Mobil: Karussell */
 @media (max-width: 640px) {
   .carousel-track img { height: 260px; }
 }
