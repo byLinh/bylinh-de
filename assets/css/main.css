@@ -30,7 +30,7 @@ body { font-family: 'Lato', sans-serif; background-color: var(--sand); color: va
 h1, h2, h3 { font-family: 'Playfair Display', serif; line-height: 1.3; }
 a { color: var(--olive); text-decoration: none; }
 a:hover { text-decoration: underline; }
-.container { max-width: 720px; margin: 0 auto; padding: 0 1.5rem; }
+.container { max-width: 960px; margin: 0 auto; padding: 0 1.5rem; }
 .btn { display: inline-block; background-color: var(--olive); color: #fff; padding: 0.75rem 1.75rem; border-radius: 2px; font-family: 'Lato', sans-serif; font-weight: 700; font-size: 0.95rem; letter-spacing: 0.03em; transition: background 0.2s; cursor: pointer; border: none; }
 .btn:hover { background-color: #3f5024; text-decoration: none; }
 .btn-outline { background: transparent; border: 2px solid var(--olive); color: var(--olive); }
