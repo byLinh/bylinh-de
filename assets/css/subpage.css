@@ -25,3 +25,19 @@ footer a:hover { color: var(--olive); }
 /* anfragen.html */
 .sub { color: var(--mid); font-size: 0.95rem; margin-bottom: 2.5rem; }
 .tally-wrap { background: var(--creme); border-radius: 2px; padding: 0.5rem; }
+
+/* Projekt-Seiten */
+.project-meta { font-size: 0.8rem; color: var(--terra); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 0.5rem; }
+h1.project-title { margin-bottom: 0.4rem; }
+.project-tagline { font-style: italic; color: var(--mid); margin-bottom: 2rem; }
+.project-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 0 0 2rem; }
+.project-gallery.single { grid-template-columns: 1fr; }
+.project-gallery img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 2px; display: block; }
+.project-gallery.wide img { aspect-ratio: 4/3; }
+.project-body { margin-bottom: 2rem; }
+.project-body p { margin-bottom: 0.75rem; }
+.project-cta { margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--hover-bg); }
+.project-cta p { margin-bottom: 1rem; }
+@media (max-width: 640px) {
+  .project-gallery { grid-template-columns: 1fr; }
+}
