@@ -21,7 +21,8 @@
     <h1 class="project-title">Busy Bags für unterwegs</h1>
     <p class="project-tagline">Beschäftigung mit Herz und Köpfchen — für kleine Entdecker.</p>
 
-    <div class="project-gallery">
+    <!-- Desktop: Kachelgrid -->
+    <div class="project-gallery desktop-only">
       <img src="../assets/images/busybag1.jpeg" alt="Busy Bag" />
       <img src="../assets/images/busybag2.jpeg" alt="Busy Bag Inhalt" />
       <img src="../assets/images/busybag3.jpeg" alt="Busy Bag Detail" />
@@ -30,6 +31,23 @@
       <img src="../assets/images/busybag6.jpeg" alt="Busy Bag Beschäftigung" />
       <img src="../assets/images/busybag7.jpeg" alt="Busy Bag Material" />
       <img src="../assets/images/busybag8.jpeg" alt="Busy Bag komplett" />
+    </div>
+
+    <!-- Mobil: Karussell -->
+    <div class="carousel mobile-only" id="carousel">
+      <div class="carousel-track" id="carouselTrack">
+        <img src="../assets/images/busybag1.jpeg" alt="Busy Bag" />
+        <img src="../assets/images/busybag2.jpeg" alt="Busy Bag Inhalt" />
+        <img src="../assets/images/busybag3.jpeg" alt="Busy Bag Detail" />
+        <img src="../assets/images/busybag4.jpeg" alt="Busy Bag Aktivität" />
+        <img src="../assets/images/busybag5.jpeg" alt="Busy Bag Set" />
+        <img src="../assets/images/busybag6.jpeg" alt="Busy Bag Beschäftigung" />
+        <img src="../assets/images/busybag7.jpeg" alt="Busy Bag Material" />
+        <img src="../assets/images/busybag8.jpeg" alt="Busy Bag komplett" />
+      </div>
+      <button class="carousel-btn carousel-prev" id="carouselPrev" aria-label="Zurück">&#8249;</button>
+      <button class="carousel-btn carousel-next" id="carouselNext" aria-label="Weiter">&#8250;</button>
+      <div class="carousel-dots" id="carouselDots"></div>
     </div>
 
     <div class="project-body">
@@ -52,6 +70,42 @@
     <a href="../impressum.html">Impressum</a>
     <a href="../datenschutz.html">Datenschutz</a>
   </footer>
-  <script src="../assets/js/lightbox.js"></script>
+  <script>
+    (function () {
+      var track  = document.getElementById('carouselTrack');
+      var prev   = document.getElementById('carouselPrev');
+      var next   = document.getElementById('carouselNext');
+      var dotsEl = document.getElementById('carouselDots');
+      if (!track) return;
+      var imgs   = track.querySelectorAll('img');
+      var total  = imgs.length;
+      var current = 0;
+      imgs.forEach(function (_, i) {
+        var d = document.createElement('span');
+        d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+        d.addEventListener('click', function () { go(i); });
+        dotsEl.appendChild(d);
+      });
+      function go(index) {
+        current = (index + total) % total;
+        track.style.transform = 'translateX(-' + (current * 100) + '%)';
+        dotsEl.querySelectorAll('.carousel-dot').forEach(function (d, i) {
+          d.classList.toggle('active', i === current);
+        });
+      }
+      prev.addEventListener('click', function () { go(current - 1); });
+      next.addEventListener('click', function () { go(current + 1); });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowLeft')  go(current - 1);
+        if (e.key === 'ArrowRight') go(current + 1);
+      });
+      var startX = 0;
+      track.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
+      track.addEventListener('touchend', function (e) {
+        var diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) go(diff > 0 ? current + 1 : current - 1);
+      });
+    })();
+  </script>
 </body>
 </html>
