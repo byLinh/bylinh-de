@@ -46,3 +46,6 @@ footer{padding-top:35px}.footer-top{padding:25px 0 35px}.footer-top p{font-size:
 
 /* One section divider; no extra rule under the final value. */
 .value-list article:last-child{border-bottom:0}
+
+/* Keep only the footer divider after the final FAQ entry. */
+.faq details:last-child{border-bottom:0}
