@@ -23,7 +23,7 @@
     { opacity: .3, clipPath: 'inset(0% 12% 0% 12%)' },
     { opacity: 1, clipPath: 'inset(0% 0% 0% 0%)' }
   ], { duration: 1800 });
-  if (hero) animate(hero.querySelector('img'), [
+  if (hero && !document.querySelector('.hero-with-copy')) animate(hero.querySelector('img'), [
     { transform: 'scale(1.5)' }, { transform: 'scale(1.4)' }
   ], { duration: 2400 });
 
