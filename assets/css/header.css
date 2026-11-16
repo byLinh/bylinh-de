@@ -1,0 +1,22 @@
+/* Header study: live site unchanged. Text is HTML, never baked into a photo. */
+.hero-banner{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.3fr);align-items:center;gap:36px;margin:0 24px;background:var(--paper)}
+.hero-banner-copy{padding:36px 12px 36px 24px;max-width:560px}
+.hero-banner-copy h1{font-size:clamp(34px,3.7vw,58px);line-height:1.15}
+.hero-banner-subline{font-size:16px;line-height:1.75;margin:26px 0;color:var(--muted)}
+.hero-banner-copy .actions{gap:16px;margin-top:28px}
+.hero-with-copy .hero-editorial-image{margin:0;width:100%;height:clamp(360px,32vw,500px)}
+.hero-with-copy .hero-editorial-image img{object-position:50% 56%;transform:scale(1.7);transform-origin:70% 60%}
+.hero-with-copy .hero-editorial-intro{grid-template-columns:.85fr 1.3fr;gap:36px;padding:42px 0 56px;align-items:start}
+.hero-with-copy .hero-editorial-intro>.viet-greeting{font-size:24px!important;margin:0}
+.hero-with-copy .hero-editorial-intro>.intro{margin:0;max-width:650px}
+@media(max-width:1000px){.hero-banner{gap:22px}.hero-banner-copy{padding-left:10px}.hero-banner-copy h1{font-size:37px}}
+@media(max-width:760px){
+  .hero-banner{grid-template-columns:minmax(0,1fr);gap:24px;margin:0 20px}
+  .hero-banner-copy{padding:14px 0 0;max-width:none}
+  .hero-banner-copy h1{font-size:clamp(34px,9vw,46px)}
+  .hero-banner-subline{font-size:16px;margin:20px 0}
+  .hero-banner-copy .actions{margin-top:20px;gap:10px}
+  .hero-with-copy .hero-editorial-image{height:auto;aspect-ratio:3/2}
+  .hero-with-copy .hero-editorial-image img{object-position:50% 53%;transform:scale(1.6);transform-origin:60% 70%}
+  .hero-with-copy .hero-editorial-intro{grid-template-columns:minmax(0,1fr);gap:16px;padding:30px 0 40px}
+}
