@@ -17,7 +17,7 @@
 .motion-waiting{opacity:0;transform:translateY(48px)}
 .motion-image.motion-waiting{clip-path:inset(0 0 24% 0);transform:translateY(30px)}
 .thought h2{position:relative;padding-bottom:30px}
-.thought h2::after{content:"";display:block;width:72px;height:1px;background:var(--olive);margin-top:30px;opacity:.5}
+.thought h2::after{content:none}
 .project-open{overflow:hidden}
 .project-open .project-zoom{transition:background .3s,color .3s}
 .button span,.text-link span{display:inline-block;transition:transform .3s ease}
